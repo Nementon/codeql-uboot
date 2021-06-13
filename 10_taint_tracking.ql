@@ -17,7 +17,7 @@ class MemcpyLengthArg extends Expr {
     exists(
       Call c, Function f | 
       f.getName() = "memcpy" and c = f.getACallToThisFunction() | 
-      this = c.getAnArgumentSubExpr(2) 
+      this = c.getArgument(2)
     )	  
   }
 }
